@@ -2,14 +2,12 @@ package com.yaoge.controlle;
 
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * 登录
  */
+@CrossOrigin(origins = "http://127.0.0.1:8010", maxAge = 3600)
 @RestController
 @RequestMapping("login")
 public class Login {
