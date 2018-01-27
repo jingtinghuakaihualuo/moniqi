@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.*;
 /**
  * 登录
  */
-@CrossOrigin(origins = "http://127.0.0.1:8010", maxAge = 3600)
 @RestController
 @RequestMapping("login")
 public class Login {
