@@ -39,4 +39,15 @@ public class Common {
         object.put("result" ,null);
         return object;
     }
+
+    public static JSONObject getHasNullFail(){
+
+        JSONObject object = new JSONObject();
+
+        object.put("code" , "8888");
+        object.put("message" , "必填字段为空");
+        object.put("sign" , "");
+        object.put("result" ,null);
+        return object;
+    }
 }
