@@ -196,5 +196,109 @@ public class Plat {
         return retObj;
     }
 
+    /**
+     * 查询分销商信息
+     * @param object
+     * @return
+     */
+    @RequestMapping("distributor")
+    @ResponseBody
+    public Object distributor(@RequestBody JSONObject object){
+        Common.getHeadInfo(object);
 
+        //获取数据
+        JSONObject data = (JSONObject) object.get("data");
+
+        JSONObject retObj = Common.getSuccessResult();
+        JSONObject object1 = new JSONObject();
+        JSONArray result = new JSONArray();
+        object1.put("disid", 1001);
+        object1.put("dispid", 1001);
+        object1.put("disname","disname              1");
+        object1.put("level", 1);
+        object1.put("shopno","shopno               1");
+        object1.put("logo","logo                 1");
+        object1.put("instreprname","instreprname         1");
+        object1.put("instreprcertn","instreprcertn        1");
+        object1.put("instreprphone","instreprphone        1");
+        object1.put("contractname","contractname         1");
+        object1.put("contractphone","contractphone        1");
+        object1.put("contractmobile","contractmobile       1");
+        object1.put("imgcertno","imgcertno            1");
+        object1.put("imgopen","imgopen              1");
+        object1.put("regcapital", 100112.01);
+        object1.put("socode","socode               1");
+        object1.put("imgsocode","imgsocode            1");
+        object1.put("prov","prov                 1");
+        object1.put("city","city                 1");
+        object1.put("area","area                 1");
+        object1.put("address","address              1");
+        object1.put("office","office               1");
+        object1.put("joinbegindate","joinbegindate        1");
+        object1.put("joinenddate","joinenddate          1");
+        object1.put("status","status               1");
+        object1.put("summary","summary              1");
+        object1.put("settime","2018-02-02 13:30:01");
+        object1.put("updatetime","2018-02-02 13:30:01");
+
+        result.add(object1);
+
+        object1.clear();
+
+        object1.put("disid", 1001);
+        object1.put("dispid", 1001);
+        object1.put("disname","disname              2");
+        object1.put("level", 1);
+        object1.put("shopno","shopno               2");
+        object1.put("logo","logo                 2");
+        object1.put("instreprname","instreprname         2");
+        object1.put("instreprcertn","instreprcertn        2");
+        object1.put("instreprphone","instreprphone        2");
+        object1.put("contractname","contractname         2");
+        object1.put("contractphone","contractphone        2");
+        object1.put("contractmobile","contractmobile       2");
+        object1.put("imgcertno","imgcertno            2");
+        object1.put("imgopen","imgopen              2");
+        object1.put("regcapital", 100112.01);
+        object1.put("socode","socode               2");
+        object1.put("imgsocode","imgsocode            2");
+        object1.put("prov","prov                 2");
+        object1.put("city","city                 2");
+        object1.put("area","area                 2");
+        object1.put("address","address              2");
+        object1.put("office","office               2");
+        object1.put("joinbegindate","joinbegindate        2");
+        object1.put("joinenddate","joinenddate          2");
+        object1.put("status","status               2");
+        object1.put("summary","summary              2");
+        object1.put("settime","2018-02-02 13:30:02");
+        object1.put("updatetime","2018-02-02 13:30:02");
+
+        result.add(object1);
+
+        return result;
+
+    }
+
+    /**
+     * 分销商新增或者修改
+     * @param object
+     * @return
+     */
+    @RequestMapping("distributor/add")
+    @ResponseBody
+    public Object distributor_add(@RequestBody JSONObject object) {
+
+
+        //获取头信息
+        Common.getHeadInfo(object);
+
+        //获取数据
+        JSONObject data = (JSONObject) object.get("data");
+
+        if (data.containsKey("disname")) {
+            return Common.getHasNullFail();
+        }
+        return Common.getSuccessResult();
+    }
 }
